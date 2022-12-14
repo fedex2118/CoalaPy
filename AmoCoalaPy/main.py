@@ -1,11 +1,6 @@
 import nexusReader as nr
 import parasyteTreeGenerator as ptg
 
-apCoalaFile = "AmoCoala/Datasets/RealDatasets/AP_coala.nex"
-sblFile = "AmoCoala/Datasets/RealDatasets/SBL.nex"
-apFile = "AmoCoala/Datasets/RealDatasets/AP.nex"
-wrongFile = "AmoCoala/Datasets/RealDatasets/text.txt"
-
 def main(filename: str):
     tup = nr.nexusReader(filename)
     treeList = tup[0]
