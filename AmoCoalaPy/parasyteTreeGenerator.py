@@ -174,22 +174,3 @@ def recursiveParasyte(hostTree: PhyloTree, parasyteTree: PhyloTree, dEvent: bool
     #end loss
     
     return pSize
-
-
-
-#start = time.time()     
-#nexusReader(file2) # wrong format type for testing purposes
-
-
-#print(dictionary)
-#print(treeList[0])
-#print(treeList[1])
-#end = time.time()
-
-#nReaderTime = (end - start)
-
-# time with first for loop  (for line in f)                 4.9114227294921875e-05
-# time with second for loop (for line in f.readlines())     7.915496826171875e-05
-
-# time with first for loop  (for line in f)                 0.0037279129028320312
-# time with second for loop (for line in f.readlines())     0.0050013065338134766
