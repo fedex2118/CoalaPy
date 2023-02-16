@@ -1,4 +1,4 @@
-# AmoCoalaPy
+# CoalaPy
 An algorithm that calculates the probability of cophylogeny reconstruction events based on ABC approach for host-parasyte associations.
 This is a python version (3.6.13) of an already existing algorithm written in java. It makes use of ETE-3 Toolkit for phylogenetic trees.
 
