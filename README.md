@@ -17,7 +17,19 @@ First of all you need to download ETE-3 Toolkit and use python version 3.6 or be
 Once done just go to the main.py file.
 Below the if __name__ == "__main__" condition just pass your nexus file path to the main(path) call.
 
-Issues: the main function requires a Nexus file that has the same structure of the ones shown here in the /InputFiles/ folder to work. 
+Issues: the main function requires a Nexus file that has the same structure of the ones shown here in the /InputFiles/ folder to work.
+
+Example of how to run:
+main.py:
+
+...
+
+if __name__ == "__main__":
+    # how this works: 
+    #
+    # main("CoalaPy/InputFiles/AP_coala.nex")
+    
+    main("Write here your nexus file path")  <----------------------
 
 # More info
 
