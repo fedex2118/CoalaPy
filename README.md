@@ -19,17 +19,13 @@ Below the if __name__ == "__main__" condition just pass your nexus file path to 
 
 Issues: the main function requires a Nexus file that has the same structure of the ones shown here in the /InputFiles/ folder to work.
 
-Example of how to run:
-main.py:
+# Example of how to run main.py:
 
 ...
 
 if __name__ == "__main__":
-    # how this works: 
-    #
-    # main("CoalaPy/InputFiles/AP_coala.nex")
     
-    main("Write here your nexus file path")  <----------------------
+    main("Write here your nexus file path")  <---------------------- main("CoalaPy/InputFiles/AP_coala.nex")
 
 # More info
 
