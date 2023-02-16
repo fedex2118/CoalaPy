@@ -17,6 +17,6 @@ def main(filename: str):
 if __name__ == "__main__":
     # how this works: 
     #
-    # main("Coala/Datasets/RealDatasets/AP_coala.nex")
+    # main("CoalaPy/InputFiles/AP_coala.nex")
     
     main("Write here your nexus file path")
