@@ -10,6 +10,17 @@ The Host-Switch event as it is right now has not been implemented yet.
 
 This is still a work in progress.
 
+# How to make it run?
+
+First of all you need to download ETE-3 Toolkit and use python version 3.6 or below.
+
+Once done just go to the main.py file.
+Below the if __name__ == "__main__" condition just pass your nexus file path to the main(path) call.
+
+Issues: the main function requires a Nexus file that has the same structure of the ones shown here in the /InputFiles/ folder to work. 
+
+# More info
+
 More details about the algorithm functionality are showed in the following links below:
 
 Cophylogeny Reconstruction via an Approximate Bayesian Computation: https://academic.oup.com/sysbio/article/64/3/416/1631550?login=true
