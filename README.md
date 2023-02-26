@@ -6,7 +6,7 @@ In the current version, the algorithm reads a nexus file of "Jane / TreeMap Nexu
 (more info about the format in the first section of this document: https://team.inria.fr/erable/files/2020/11/Input-File.pdf)
 and after starting from the root of the host tree it generates a parasyte tree based on the probabilities of Cospeciation, Duplication and Loss event.
 
-The Host-Switch event as it is right now has not been implemented yet.
+The Host switch event as it is right now has not been implemented yet.
 
 This is still a work in progress.
 
@@ -14,17 +14,23 @@ This is still a work in progress.
 
 First of all you need to download ETE-3 Toolkit and use python version 3.6 or below and setup an environment for ETE-3, best practice is to use conda.
 
-To execute coalaPy inside the terminal or shell activate the environment that uses ete3.
-Then just run "executeCoala.py" with the following arguments: "pathname of your nexus file (put it inside InputFiles folder)", 
-float number that denotes cospeciation probability, float number that denotes duplication probability, float number that denotes host switch probability,
-float number that denotes loss probability.
+Coala requires a Nexus file type that must have the same structure of the ones shown here in the "InputFiles/" folder, just make sure to put your files inside that folder or any folder you create inside /CoalaPy one.
 
-Issues: Coala requires a Nexus file type that must have the same structure of the ones shown here in the "InputFiles/" folder.
+To execute coalaPy inside the terminal or shell activate the environment that uses ete3. <br />
+Then just run "executeCoala.py" with the required arguments shown below.
 
 # Example of how to run CoalaPy inside Terminal/Shell:
 
--- (base): conda activate ete3
--- (ete3): python executeCoala.py
+(base): conda activate ete3 <br />
+(ete3): python executeCoala.py InputFiles/AP_coala.nex 0.50 0.40 0.0 0.10
+
+argument 1: InputFiles/AP_coala.nex nexus filepath <br />
+argument 2: 0.50 Cospeciation probability <br />
+argument 3: 0.40 Duplication probability <br />
+argument 4: 0.0 Host switch probability Note: in the current version this one must be 0.0 <br />
+argument 5: 0.10 Loss probability
+
+The results will be printed on the terminal. 
 
 # More info
 
