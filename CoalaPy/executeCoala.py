@@ -4,11 +4,11 @@ import argparse as arg
 
 def fetch_arguments():
     parser = arg.ArgumentParser()
-    parser.add_argument("path", help=" Path of your filename that must be like this InputFiles/yourfilename.nex", type=str)
-    parser.add_argument("pC", help=" Cospeciation probability", type=float)
-    parser.add_argument("pD", help=" Duplication probability", type=float)
-    parser.add_argument("pH", help=" Host Switch probability", type=float)
-    parser.add_argument("pL", help=" Loss probability", type=float)
+    parser.add_argument("nexusfile_path", help=" Path of your filename that must be like this InputFiles/yourfilename.nex", type=str)
+    parser.add_argument("Cospeciation probability", help=" Cospeciation probability", type=float)
+    parser.add_argument("Duplication probability", help=" Duplication probability", type=float)
+    parser.add_argument("Host switch probability", help=" Host Switch probability", type=float)
+    parser.add_argument("Loss probability", help=" Loss probability", type=float)
     args = parser.parse_args()
     print(args)
     return args
