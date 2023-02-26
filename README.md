@@ -23,8 +23,8 @@ Issues: Coala requires a Nexus file type that must have the same structure of th
 
 # Example of how to run CoalaPy inside Terminal/Shell:
 
-(base): conda activate ete3
-(ete3): python executeCoala.py
+-- (base): conda activate ete3
+-- (ete3): python executeCoala.py
 
 # More info
 
