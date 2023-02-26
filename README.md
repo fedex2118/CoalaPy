@@ -14,7 +14,8 @@ This is still a work in progress.
 
 First of all you need to download ETE-3 Toolkit and use python version 3.6 or below and setup an environment for ETE-3, best practice is to use conda.
 
-Coala requires a Nexus file type that must have the same structure of the ones shown here in the "InputFiles/" folder, just make sure to put your files inside that folder or any folder you create inside /CoalaPy one.
+Coala requires a Nexus file type that must have the same structure of the ones shown here in the "InputFiles/" folder. <br />
+Make sure to put your files inside any folder you create in /CoalaPy or just put them inside the one just mentioned before.
 
 To execute coalaPy inside the terminal or shell activate the environment that uses ete3. <br />
 Then just run "executeCoala.py" with the required arguments shown below.
