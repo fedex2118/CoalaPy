@@ -12,20 +12,19 @@ This is still a work in progress.
 
 # How to make it run?
 
-First of all you need to download ETE-3 Toolkit and use python version 3.6 or below.
+First of all you need to download ETE-3 Toolkit and use python version 3.6 or below and setup an environment for ETE-3, best practice is to use conda.
 
-Once done just go to the main.py file.
-Below the if __name__ == "__main__" condition just pass your nexus file path to the main(path) call.
+To execute coalaPy inside the terminal or shell activate the environment that uses ete3.
+Then just run "executeCoala.py" with the following arguments: "pathname of your nexus file (put it inside InputFiles folder)", 
+float number that denotes cospeciation probability, float number that denotes duplication probability, float number that denotes host switch probability,
+float number that denotes loss probability.
 
-Issues: the main function requires a Nexus file that has the same structure of the ones shown here in the /InputFiles/ folder to work.
+Issues: Coala requires a Nexus file type that must have the same structure of the ones shown here in the "InputFiles/" folder.
 
-# Example of how to run main.py:
+# Example of how to run CoalaPy inside Terminal/Shell:
 
-...
-
-if __name__ == "__main__":
-    
-    main("Write here your nexus file path")  <---------------------- main("CoalaPy/InputFiles/AP_coala.nex")
+(base): conda activate ete3
+(ete3): python executeCoala.py
 
 # More info
 
