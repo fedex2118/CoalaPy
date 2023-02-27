@@ -22,6 +22,8 @@ Then just run "executeCoala.py" with the required arguments shown below.
 
 # Example of how to run CoalaPy inside Terminal/Shell:
 
+From the terminal go into CoalaPy path location: .../CoalaPy
+
 (base): conda activate ete3 <br />
 (ete3): python executeCoala.py InputFiles/AP_coala.nex 0.50 0.40 0.0 0.10
 
