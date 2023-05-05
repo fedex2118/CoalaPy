@@ -30,15 +30,15 @@ From the terminal go into CoalaPy path location: .../CoalaPy
 (base): conda activate ete3 <br />
 (ete3): python executeCoala.py generation InputFiles/Dataset1.nex 0.50 0.40 0.0 0.10 100
 
-There are two main options to run executeCoala.py: 
-    1) generation: Generates the parasyte trees, it requires six other arguments to work:
+There are two main options to run executeCoala.py: <br />
+    1) generation: Generates the parasyte trees, it requires six other arguments to work: <br />
 
       argument 1: InputFiles/Dataset1.nex nexus filepath <br />
       argument 2: 0.50 Cospeciation probability <br />
       argument 3: 0.40 Duplication probability <br />
       argument 4: 0.0 Host switch probability Note: in the current version this one must be 0.0 <br />
       argument 5: 0.10 Loss probability <br />
-      argument 6: N number of parasyte trees to generate. (N must be <= 300 in the current version).
+      argument 6: N number of parasyte trees to generate. (N must be <= 300 in the current version). <br />
       
 Remember that the sum of the probabilities must be 1.0!
 
@@ -46,9 +46,9 @@ The results will be printed on the terminal.
 
 (ete3): python executeCoala.py plot GenParasytes/gen_results_1d5ia8na.txt
 
-    2) plot: Generates the absolute distances in size between original parasyte tree and the generated ones. It requires one other argument:
+    2) plot: Generates the absolute distances in size between original parasyte tree and the generated ones. It requires one other argument: <br />
     
-    argument 1: gen_results_1d5ia8na.txt text filepath. The resuls of a generation.
+    argument 1: gen_results_1d5ia8na.txt text filepath. The resuls of a generation. <br />
 
 The results will be printed on the terminal.
 
