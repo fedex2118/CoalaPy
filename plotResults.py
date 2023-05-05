@@ -69,9 +69,9 @@ def execute_plot(path):
     L = "L: " + prob_vector[3] 
     
     # print the results
-    print("Con un vettore di probabilità: " + C + " " + D + " " + H + " " + L)
-    print("Size dell'albero parassita originale: " + str(original_p_size))
-    print("Le distanze tra albero originale e quelli generati sono: " + str(distances))
+    print("With probability vector: " + C + " " + D + " " + H + " " + L)
+    print("Size of the original parasyte tree: " + str(original_p_size))
+    print("Distances in size between original parasyte tree and generated ones are: " + str(distances))
                 
             
 
