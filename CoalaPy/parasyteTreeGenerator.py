@@ -62,7 +62,7 @@ def parasyteTreeGenerator(host_tree: PhyloTree, p_tree: PhyloTree, prob_vector: 
         # 1 of 4 events can occur: C, D, H, L
         p_size = 0
         p_size = recursive_parasyte(host_tree, parasyte_tree, False, False, p_size, doubled_size,
-                                False, prob_vector) # starting from rootHost and rootNewParasyte
+                                False, prob_vector) # starting from root of host tree and root of new parasyte tree
         
         # check if pSize is minor or equal than double the size of the original Parasyte tree:
         if p_size <= doubled_size: # if it's true then we store the tree
