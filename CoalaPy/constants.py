@@ -16,6 +16,9 @@ NUM_OF_NEW_LINES_ALLOWED = 1 # How many single '\n' lines are permitted before t
 ASSERT_WRONG_STRUCTURE = "The Nexus file structure is wrong, check AmoCoala documentation on 'input files' section."
 
 BEGIN = "BEGIN"
+HOST = "HOST"
+PARASITE = "PARASITE"
+PARASYTE = "PARASYTE"
 TREE_HOST = "Host"
 TREE_HOSTS = "Hosts"
 HOST_WORDS_ALLOWED = [TREE_HOST, TREE_HOSTS]
