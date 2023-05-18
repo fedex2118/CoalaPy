@@ -1,6 +1,6 @@
 # CoalaPy
 An algorithm that calculates the probability of cophylogeny reconstruction events: it is based on Coala algorithm written in Java, that uses ABC approach for host-parasyte associations.
-This is as for now uses python version (3.6.13).It makes use of ETE-3 Toolkit for phylogenetic trees.
+This is as for now uses python version (3.6.13).It makes use of ETE-3 Toolkit version 1.7.9 for phylogenetic trees.
 
 In the current version, the algorithm reads a nexus file of "Jane / TreeMap Nexus" format 
 (more info about the format in the first section of this document: https://team.inria.fr/erable/files/2020/11/Input-File.pdf)
@@ -8,7 +8,7 @@ and after starting from the root of the host tree it generates a parasyte tree b
 
 It then stores the generated trees into a file under the "GenParasytes" folder and after that the results can be also used to calculate absolute distance between the original parasyte tree used, and the generated ones. This could be helpful to retrieve information about the history of the generated trees and observe if those ones are close to the real one in terms of size.
 
-The Host switch event as it is right now has not been implemented yet as for other types of distances.
+The Host switch event as it is right now has not been implemented, so it is for other types of distances. For this reason it can be better described as a DL or Dup-Loss (Duplication-Loss) model instead of a DTL one (Duplication-Transfer-Loss).
 The main issue at the moment to calculate other type of distances is that both the original parasyte tree and the generated trees are multilabeled trees.
 
 This is still a work in progress.
