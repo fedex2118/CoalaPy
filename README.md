@@ -53,6 +53,10 @@ The results will be printed on the terminal.
 
 The results will be printed on the terminal.
 
+# About Random Dataset folder
+
+Random_Dataset folder contains newick files that have newick trees inside of them that were generated randomly with a simpler algorithm. Don't use these files for generation neither plotting since the structure of these files is not the same of Coala datasets. Those files should be used instead for other purposes, as to test your implementations.
+
 # More info
 
 More details about the algorithm functionality are showed in the following links below:
