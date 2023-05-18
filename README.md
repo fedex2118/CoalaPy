@@ -53,9 +53,10 @@ The results will be printed on the terminal.
 
 The results will be printed on the terminal.
 
-# About Random Dataset folder
+# About Benchmark folder
 
-Random_Dataset folder contains newick files that have newick trees inside of them that were generated randomly with a simpler algorithm. Don't use these files for generation neither plotting since the structure of these files is not the same of Coala datasets. Those files should be used instead for other purposes, as to test your implementations in ete-3.
+The Benchmark folder contains a randomly generated set of trees that have 10, 100, 1000, 10000, 100000 leaves, scripts and results of a comparison between operations of load tree, preorder, postorder, inorder, levelorder for biopython biophylo module, DendroPy and ETE3 executed 60 times per each tree. The more accurate details of such benchmark will be avaible soon... 
+You can download this folder if you want to test it yourself on your operating system and see how your results compare to the ones posted here.
 
 # More info
 
