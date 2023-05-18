@@ -1,0 +1,31 @@
+PREORDER VISIT
+Tree with 10 leaves:
+
+BioPython time: 0.009585780000634259
+DendroPy time: 0.024767487000644905
+ETE3 time: 0.010312424001313047
+
+Tree with 100 leaves:
+
+BioPython time: 0.054719394000130706
+DendroPy time: 0.15162906699697487
+ETE3 time: 0.04849434300194844
+
+Tree with 1000 leaves:
+
+BioPython time: 0.7900085569999646
+DendroPy time: 2.1616000150024774
+ETE3 time: 0.6599777809969964
+
+Tree with 10000 leaves:
+
+BioPython time: 7.0579358549985045
+DendroPy time: 20.60662450200107
+ETE3 time: 5.964638386001752
+
+Tree with 100000 leaves:
+
+BioPython time: 75.16901795299782
+DendroPy time: Killed
+ETE3 time: 88.090368861
+

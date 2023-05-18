@@ -1,0 +1,31 @@
+INORDER VISIT
+Tree with 10 leaves:
+
+BioPython time: non existant method
+DendroPy time: 0.0214506939992134
+ETE3 time: non existant method
+
+Tree with 100 leaves:
+
+BioPython time: non existant method
+DendroPy time: 0.16040190100102336
+ETE3 time: non existant method
+
+Tree with 1000 leaves:
+
+BioPython time: non existant method
+DendroPy time: 1.8950629780010786
+ETE3 time: non existant method
+
+Tree with 10000 leaves:
+
+BioPython time: non existant method
+DendroPy time: 18.474239554001542
+ETE3 time: non existant method
+
+Tree with 100000 leaves:
+
+BioPython time: non existant method
+DendroPy time: Killed
+ETE3 time: non existant method
+

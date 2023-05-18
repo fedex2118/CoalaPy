@@ -1,0 +1,45 @@
+LOAD OPERATION AND MEMORY USAGE
+Tree with 10 leaves:
+
+BioPython average load time: 0.00015731603307358454 seconds
+BioPython average memory usage: 0.008399866666666667MB
+DendroPy average load time: 0.0004518484167419956 seconds
+DendroPy average memory usage: 0.017098400000000003MB
+ETE3 average load time: 0.0002210363333991457 seconds
+ETE3 average memory usage: 0.008079633333333332MB
+
+Tree with 100 leaves:
+
+BioPython average load time: 0.0010421274333566543 seconds
+BioPython average memory usage: 0.10222186666666667MB
+DendroPy average load time: 0.0035951785331538606 seconds
+DendroPy average memory usage: 0.1676454666666667MB
+ETE3 average load time: 0.0013737565835375183 seconds
+ETE3 average memory usage: 0.09746110000000001MB
+
+Tree with 1000 leaves:
+
+BioPython average load time: 0.007479889766788498 seconds
+BioPython average memory usage: 1.0634232MB
+DendroPy average load time: 0.033410964433460325 seconds
+DendroPy average memory usage: 1.6674692MB
+ETE3 average load time: 0.023994095550309187 seconds
+ETE3 average memory usage: 1.0695449666666665MB
+
+Tree with 10000 leaves:
+
+BioPython average load time: 0.18686582139986666 seconds
+BioPython average memory usage: 10.6493332MB
+DendroPy average load time: 0.5359831678835689 seconds
+DendroPy average memory usage: 16.475016266666668MB
+ETE3 average load time: 0.2059684280333992 seconds
+ETE3 average memory usage: 10.798730833333334MB
+
+Tree with 100000 leaves:
+
+BioPython average load time: 1.7723854481168018 seconds
+BioPython average memory usage: 106.579706MB
+DendroPy average load time: 10.313732832783293 seconds
+DendroPy average memory usage: 167.91709533333335MB
+ETE3 average load time: 2.394691006383497 seconds
+ETE3 average memory usage: 108.18882083333332MB

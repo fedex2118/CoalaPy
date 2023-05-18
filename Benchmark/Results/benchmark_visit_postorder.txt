@@ -1,0 +1,30 @@
+POSTORDER VISIT
+Tree with 10 leaves:
+
+BioPython time: 0.010868665998714278
+DendroPy time: 0.022444065001764102
+ETE3 time: 0.008682053001393797
+
+Tree with 100 leaves:
+
+BioPython time: 0.05871436500092386
+DendroPy time: 0.15538908500093385
+ETE3 time: 0.05697300800238736
+
+Tree with 1000 leaves:
+
+BioPython time: 0.6370462060003774
+DendroPy time: 1.72158565099744
+ETE3 time: 0.6080341720007709
+
+Tree with 10000 leaves:
+
+BioPython time: 6.785569609997765
+DendroPy time: 16.52253994900093
+ETE3 time: 5.726655216996733
+
+Tree with 100000 leaves:
+
+BioPython time: 65.83900364100191
+DendroPy time: Killed
+ETE3 time: 58.045722294998995
