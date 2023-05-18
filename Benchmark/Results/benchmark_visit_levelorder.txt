@@ -1,4 +1,4 @@
-PREORDER VISIT
+LEVELORDER VISIT
 Tree with 10 leaves:
 
 BioPython time: 0.009585780000634259
