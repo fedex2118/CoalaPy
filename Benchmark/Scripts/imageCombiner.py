@@ -1,13 +1,13 @@
 from PIL import Image
 
-# Dimensioni desiderate per l'immagine finale
-output_width = 1920  # da adattare alle tue esigenze
-output_height = 1080  # da adattare alle tue esigenze
+# desired dimension of combined image
+output_width = 2000  # width
+output_height = 1800  # height
 
-# Crea un'immagine vuota della dimensione desiderata
+# image of desired size
 output_image = Image.new("RGB", (output_width, output_height))
 
-# Lista dei file immagine
+# input list
 images = ["Benchmark/Load Tree (Execution Time).png",
           "Benchmark/Load Tree (Memory Usage).png",
           "Benchmark/Pre-order Traversal.png",
@@ -15,20 +15,20 @@ images = ["Benchmark/Load Tree (Execution Time).png",
           "Benchmark/Post-order Traversal.png",
           "Benchmark/Level-order Traversal.png"]
 
-# Imposta le dimensioni di ciascuna immagine nella griglia
+# dimension of each image on grid
 image_width = output_width // 2
 image_height = output_height // 3
 
 for index, file in enumerate(images):
-    # Apre l'immagine
+    # open image
     img = Image.open(file)
-    # Ridimensiona l'immagine
-    img = img.resize((image_width, image_height))
-    # Calcola la posizione dell'immagine nella griglia
+    # resize image
+    img = img.resize((image_width, image_height), Image.ANTIALIAS)
+    # position on grid
     x = index % 2 * image_width
     y = index // 2 * image_height
-    # Incolla l'immagine nell'immagine di output
+    # paste image on output
     output_image.paste(img, (x, y))
 
-# Salva l'immagine di output
+# save output
 output_image.save("Benchmark/merged_diagrams.png")
