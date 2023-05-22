@@ -58,9 +58,7 @@ The results will be printed on the terminal.
 The Benchmark folder contains a randomly generated set of trees that have 10, 100, 1000, 10000, 100000 leaves, scripts and results of a comparison between operations of load tree, preorder, postorder, inorder, levelorder for biopython biophylo module, DendroPy and ETE3 executed 60 times per each tree. The more accurate details of such benchmark will be avaible soon... 
 You can download this folder if you want to test it yourself on your operating system and see how your results compare to the ones posted here.
 
-# More info
-
-More details about the algorithm functionality are showed in the following links below:
+# References
 
 Cophylogeny Reconstruction via an Approximate Bayesian Computation: https://academic.oup.com/sysbio/article/64/3/416/1631550?login=true
 
