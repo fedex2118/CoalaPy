@@ -62,15 +62,18 @@ def parasyteTreeGenerator(host_tree: PhyloTree, p_tree: PhyloTree, prob_vector: 
         # 1 of 4 events can occur: C, D, H, L
         p_size = 0
         p_size = recursive_parasyte(host_tree, parasyte_tree, False, False, p_size, doubled_size,
-                                False, prob_vector) # starting from root of host tree and root of new parasyte tree
+                                False, prob_vector) # starting from rootHost and rootNewParasyte
         
         # check if pSize is minor or equal than double the size of the original Parasyte tree:
         if p_size <= doubled_size: # if it's true then we store the tree
             parasyte_newick: str = parasyte_tree.write(format=9) + '\n'
             parasyte_trees_gen.append(parasyte_newick)
         # else: the tree is not used
+        print(parasyte_tree)
     
     number_of_useful_trees = len(parasyte_trees_gen)
+    if N == 1:
+        print("The number of trees to generate was equal to 1, put a higher number to start a proper generation.")
     
     if N > 1: # if N > 1 let's make a file that contains the results of the generation
         generation_results(number_of_useful_trees, parasyte_trees_gen, original_parasyte_tree_copy,
