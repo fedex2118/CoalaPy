@@ -1,0 +1,20 @@
+#NEXUS
+BEGIN HOST;
+	TREE * Host      = (((((A_cornigera, A_sphaerocephala), A_gentlei), ((((A_globulifera, A_collinsii), A_hirtipes), A_hindsii), A_cedilloi)), A_mayana), A_chiapensis);
+ENDBLOCK;
+
+BEGIN PARASITE;
+	TREE * Parasite = ((((((P_ferrugineus, P_flavicornis), P_mixtecus), P_peperi), P_veneficus), P_spinicola), P_nigrocinctus);
+ENDBLOCK;
+
+BEGIN DISTRIBUTION;
+	RANGE
+P_ferrugineus: A_chiapensis,
+P_flavicornis: A_cornigera,
+P_mixtecus: A_hindsii,
+P_peperi: A_chiapensis,
+P_veneficus: A_globulifera,
+P_spinicola: A_collinsii,
+P_nigrocinctus: A_cornigera
+	;
+END;
