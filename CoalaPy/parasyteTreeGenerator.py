@@ -69,7 +69,7 @@ def parasyteTreeGenerator(host_tree: PhyloTree, p_tree: PhyloTree, prob_vector: 
             parasyte_newick: str = parasyte_tree.write(format=9) + '\n'
             parasyte_trees_gen.append(parasyte_newick)
         # else: the tree is not used
-        print(parasyte_tree)
+        #print(parasyte_tree) # remove comment to see generated trees printed on console
     
     number_of_useful_trees = len(parasyte_trees_gen)
     if N == 1:
@@ -77,7 +77,7 @@ def parasyteTreeGenerator(host_tree: PhyloTree, p_tree: PhyloTree, prob_vector: 
     
     if N > 1: # if N > 1 let's make a file that contains the results of the generation
         generation_results(number_of_useful_trees, parasyte_trees_gen, original_parasyte_tree_copy,
-                           prob_vector)
+                           prob_vector, N)
 
 def recursive_parasyte(host_tree: PhyloTree, parasyte_tree: PhyloTree, d_event: bool, is_left: bool,
                       p_size: int, doubled_p_size: int, loss_failed: bool, prob_vector: list):
@@ -246,7 +246,7 @@ def create_parasyte_copy(original_parasyte_tree: PhyloTree, parasyte_tree_copy: 
 
 
 def generation_results(number_of_useful_trees: int, parasyte_trees_gen: list, 
-                       original_parasyte_tree_copy: PhyloTree, prob_vector: list):
+                       original_parasyte_tree_copy: PhyloTree, prob_vector: list, N: int):
     if number_of_useful_trees < 1: # Generation failed to generate "good" trees:
             print("Generation resulted in 0 'good enough' parasyte trees: the size of those trees resulted to be bigger than double the size of the original tree!\nNo real comparison could be made for such trees.\nTry different event probabilities: the higher duplication event probability is, the higher the chance to get bad results.")
     else: # Generation ends with positive results:
@@ -263,10 +263,11 @@ def generation_results(number_of_useful_trees: int, parasyte_trees_gen: list,
         try:
             with open(generation_results_file, 'x') as f: # generation_results file
                 f.write(first_line)
+                f.write("N: " + str(N) + '\n')
                 f.writelines(parasyte_trees_gen) # add all the newick format parasyte trees
                 f.write("Original Parasyte Tree:\n")
                 f.write(original_parasyte_tree_copy.write(format=9)) # add copy of the original parasyte tree with host associated labelled leaves.
-                    
+                
         except FileNotFoundError:
             print(GENERATED_PARASYTE_TREES_FOLDER + " not found! There should be a folder called: " + GENERATED_PARASYTE_TREES_FOLDER + ". If it's not there try creating a new one with that name.")
         finally:
