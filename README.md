@@ -16,6 +16,7 @@ This is still a work in progress.
 # How to make it run?
 
 First of all you need to download ETE-3 Toolkit and use python version 3.6 or below and setup an environment for ETE-3, best practice is to use conda.
+Then you need to have matplotlib and numpy libraries installed in order to make the program work.
 
 Coala requires a Nexus file type that must have the same structure of the ones shown here in the "InputFiles/" folder. <br />
 Make sure to put your files inside any folder you create in /CoalaPy or just put them inside the one just mentioned before.
@@ -43,15 +44,15 @@ There are two main options to run executeCoala.py: <br />
       
 Remember that the sum of the probabilities must be 1.0!
 
-The results will be printed on the terminal.
+The results will be printed on the terminal and will be placed inside a generated text file that you can later find under GenParasytes folder, so don't delete it.
 
-(ete3): python executeCoala.py plot GenParasytes/gen_results_1d5ia8na.txt
+(ete3): python executeCoala.py plot GenParasytes/data4vect01.txt
 
 2) plot: Generates the absolute distances in size between original parasyte tree and the generated ones. It requires one other argument: <br />
     
     argument 1: gen_results_1d5ia8na.txt text filepath. The results of a generation. <br />
 
-The results will be printed on the terminal.
+The results will be printed on the terminal and an histogram will be created. It wil show the distribution of difference in the number of leaves from the original parasyte tree and the generated ones.
 
 # About Benchmark folder
 
