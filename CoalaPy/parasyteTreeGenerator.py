@@ -1,6 +1,7 @@
 from ete3 import PhyloTree
 from numpy import random as rand
 from math import fsum
+import time
 
 import string
 import os
@@ -27,7 +28,7 @@ def parasyteTreeGenerator(host_tree: PhyloTree, p_tree: PhyloTree, prob_vector: 
     #print(summ)
     assert (summ == 1), "The sum of the probabilities must be 1!"
     
-    assert (N <= 300), "Number of trees to generate must be <= than 300!"
+    assert (N <= 600), "Number of trees to generate must be <= than 600!"
     
     # parasyte_tree size
     print("Original Parasyte Tree:")
@@ -55,7 +56,6 @@ def parasyteTreeGenerator(host_tree: PhyloTree, p_tree: PhyloTree, prob_vector: 
     parasyte_trees_gen = [] # this list will contain all useful parasyte trees generated
     
     print("doubled_original_size: " + (str)(doubled_size))
-    
     for x in range(N):
         # let's generate a new parasyteTree
         parasyte_tree = PhyloTree() # node v
@@ -77,7 +77,7 @@ def parasyteTreeGenerator(host_tree: PhyloTree, p_tree: PhyloTree, prob_vector: 
     
     if N > 1: # if N > 1 let's make a file that contains the results of the generation
         generation_results(number_of_useful_trees, parasyte_trees_gen, original_parasyte_tree_copy,
-                           prob_vector, N)
+                           host_tree, prob_vector, N)
 
 def recursive_parasyte(host_tree: PhyloTree, parasyte_tree: PhyloTree, d_event: bool, is_left: bool,
                       p_size: int, doubled_p_size: int, loss_failed: bool, prob_vector: list):
@@ -246,7 +246,8 @@ def create_parasyte_copy(original_parasyte_tree: PhyloTree, parasyte_tree_copy: 
 
 
 def generation_results(number_of_useful_trees: int, parasyte_trees_gen: list, 
-                       original_parasyte_tree_copy: PhyloTree, prob_vector: list, N: int):
+                       original_parasyte_tree_copy: PhyloTree, 
+                       host_tree: PhyloTree, prob_vector: list, N: int):
     if number_of_useful_trees < 1: # Generation failed to generate "good" trees:
             print("Generation resulted in 0 'good enough' parasyte trees: the size of those trees resulted to be bigger than double the size of the original tree!\nNo real comparison could be made for such trees.\nTry different event probabilities: the higher duplication event probability is, the higher the chance to get bad results.")
     else: # Generation ends with positive results:
@@ -266,7 +267,9 @@ def generation_results(number_of_useful_trees: int, parasyte_trees_gen: list,
                 f.write("N: " + str(N) + '\n')
                 f.writelines(parasyte_trees_gen) # add all the newick format parasyte trees
                 f.write("Original Parasyte Tree:\n")
-                f.write(original_parasyte_tree_copy.write(format=9)) # add copy of the original parasyte tree with host associated labelled leaves.
+                f.write(original_parasyte_tree_copy.write(format=9) + '\n') # add copy of the original parasyte tree with host associated labelled leaves.
+                f.write("Host Tree:\n")
+                f.write(host_tree.write(format=9))
                 
         except FileNotFoundError:
             print(GENERATED_PARASYTE_TREES_FOLDER + " not found! There should be a folder called: " + GENERATED_PARASYTE_TREES_FOLDER + ". If it's not there try creating a new one with that name.")
