@@ -33,7 +33,7 @@ From the terminal go into CoalaPy path location: .../CoalaPy
 
 There are two main options to run executeCoala.py: <br />
 
-1) generation: Generates the parasyte trees, it requires six other arguments to work: <br />
+1) generation: Generates the parasyte trees and saves all data of the generation inside a new text file. It requires six other arguments to work: <br />
 
       argument 1: InputFiles/Dataset1.nex nexus filepath <br />
       argument 2: 0.50 Cospeciation probability <br />
@@ -45,10 +45,11 @@ There are two main options to run executeCoala.py: <br />
 Remember that the sum of the probabilities must be 1.0!
 
 The results will be printed on the terminal and will be placed inside a generated text file that you can later find under GenParasytes folder, so don't delete it.
+You can rename the file as you want, don't change the extension of the file.
 
 (ete3): python executeCoala.py plot GenParasytes/data4vect01.txt
 
-2) plot: Generates the absolute distances in size between original parasyte tree and the generated ones. It requires one other argument: <br />
+2) plot: it shows the results of a simulation with two histograms. The first shows the distribution of the leaves, the second one the distribution of heights of the generated trees. Two vertical lines are used to see how much the generated trees correspond to the ones in input. It requires one argument: <br />
     
     argument 1: gen_results_1d5ia8na.txt text filepath. The results of a generation. <br />
 
