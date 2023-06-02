@@ -112,12 +112,12 @@ def execute_plot(path):
     linestyle_h = "-"
     linestyle_p = "--"
     
-    label_h = "H Tree"
-    label_p = "Original P Tree"
+    label_h = "Host Tree"
+    label_p = "Original Parasyte Tree"
 
     # leaves histogram
     axs[0].hist(generated_parasytes_leaf_size, bins=10, edgecolor='black')
-    axs[0].set_xlabel("Number of leaves")
+    axs[0].set_xlabel("Number of tree leaves")
     axs[0].set_ylabel("Number of generated trees")
     axs[0].set_title("Distribution of leaves")
     
@@ -150,7 +150,7 @@ def execute_plot(path):
     axs[1].hist(generated_parasytes_height, bins=10, edgecolor='black')
     axs[1].set_xlabel("Tree heights")
     axs[1].set_ylabel("Number of generated trees")
-    axs[1].set_title("Distribution of tree heights")
+    axs[1].set_title("Distribution of heights")
     
     # vertical lines for heights histogtam
     axs[1].axvline(host_tree_height, color=color_h_line, linestyle=linestyle_h, linewidth=1)
