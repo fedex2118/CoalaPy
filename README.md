@@ -1,5 +1,5 @@
 # CoalaPy
-A software for co-philogeny recostruction. This is a first prototype of Coala, as such it doesn't implements all the feature Coala has.
+A software for co-philogeny recostruction. This is a first prototype of Coala, as such it doesn't implements all the features Coala has.
 This program uses python version (3.6.13) and ETE-3 Toolkit version 1.7.9.
 
 CoalaPy is based on a semplified version of the co-evolutionary model of Coala that doesn't have Host-Switch events. It needs a Nexus file in input containing two philogenetic trees, one for hosts and one for parasytes, and current associations for taxa of the two trees (more info on the "How to make it run" section below). It also requires a set of probability for the events of Co-speciation, Duplication and Loss, previously established from the co-evolutionary model. It simulates the evolution of the parasytes species following the evolution of the hosts. The results of such simulation is a finite number of generated parasyte trees that are stored into a text file under the "GenParasytes" folder. The results of such simulation can be used to plot the distributions of leaves and height of generated trees. The plot of such distributions could be useful to see how the generated trees were created for the set of probabilties used.
