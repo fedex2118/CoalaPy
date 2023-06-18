@@ -1,17 +1,10 @@
 # CoalaPy
-An algorithm that calculates the probability of cophylogeny reconstruction events: it is based on Coala algorithm written in Java, that uses ABC approach for host-parasyte associations.
-This is as for now uses python version (3.6.13).It makes use of ETE-3 Toolkit version 1.7.9 for phylogenetic trees.
+A software for co-philogeny recostruction. This is a first prototype of Coala, a software written in Java, that uses ABC approach to explain co-evolutionary history of host-parasyte interactions.
+This program uses python version (3.6.13) and ETE-3 Toolkit version 1.7.9.
 
-In the current version, the algorithm reads a nexus file of "Jane / TreeMap Nexus" format 
-(more info about the format in the first section of this document: https://team.inria.fr/erable/files/2020/11/Input-File.pdf)
-and after starting from the root of the host tree it generates a parasyte tree based on the probabilities of Cospeciation, Duplication and Loss event.
+CoalaPy is based on a semplified version of the co-evolutionary model of Coala that doesn't have Host-Switch events. It needs a Nexus file in input containing two philogenetic trees, one for hosts and one for parasytes, and current associations for taxa of the two trees (more info on the "How to make it run" section below). It also requires a set of probability for the events of Co-speciation, Duplication and Loss, previously established from the co-evolutionary model. It simulates the evolution of the parasytes species following the evolution of the hosts. The results of such simulation is a finite number of generated parasyte trees that are stored into a text file under the "GenParasytes" folder. The results of such simulation can be used to plot the distributions of leaves and height of generated trees. The plot of such distributions could be useful to see how the generated trees were created for the set of probabilties used.
 
-It then stores the generated trees into a file under the "GenParasytes" folder and after that the results can be also used to calculate absolute distance between the original parasyte tree used, and the generated ones. This could be helpful to retrieve information about the history of the generated trees and observe if those ones are close to the real one in terms of size.
-
-The Host switch event as it is right now has not been implemented, so it is for other types of distances. For this reason it can be better described as a DL or Dup-Loss (Duplication-Loss) model instead of a DTL one (Duplication-Transfer-Loss).
-The main issue at the moment to calculate other type of distances is that both the original parasyte tree and the generated trees are multilabeled trees.
-
-This is still a work in progress.
+The Host switch event for this prototype has not been implemented yet. For this reason this software can be used only for DL or Dup-Loss (Duplication-Loss) models and not for DTL ones (Duplication-Transfer-Loss).
 
 # How to make it run?
 
@@ -53,7 +46,7 @@ You can rename the file as you want, don't change the extension of the file.
     
     argument 1: gen_results_1d5ia8na.txt text filepath. The results of a generation. <br />
 
-The results will be printed on the terminal and an histogram will be created. It wil show the distribution of difference in the number of leaves from the original parasyte tree and the generated ones.
+The results will be printed on the terminal and two istograms will be shown.
 
 # About Benchmark folder
 
