@@ -6,7 +6,7 @@ import time
 import string
 import os
 
-#### ParasyteTreeGenerator Constants ####
+#### ParasiteTreeGenerator Constants ####
 C = "C"
 D = "D"
 H = "H"
@@ -31,7 +31,7 @@ def parasyteTreeGenerator(host_tree: PhyloTree, p_tree: PhyloTree, prob_vector: 
     assert (N <= 600), "Number of trees to generate must be <= than 600!"
     
     # parasyte_tree size
-    print("Original Parasyte Tree:")
+    print("Original Parasite Tree:")
     print(p_tree)
     original_size = 0
     
