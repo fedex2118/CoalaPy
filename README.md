@@ -6,7 +6,7 @@ CoalaPy is based on a semplified version of the co-evolutionary model of Coala t
 
 The Host switch event for this prototype has not been implemented yet. For this reason this software can be used only for DL or Dup-Loss (Duplication-Loss) models and not for DTL ones (Duplication-Transfer-Loss).
 
-# How to make it run?
+# How to run?
 
 First of all you need to download ETE-3 Toolkit and use python version 3.6 or below and setup an environment for ETE-3, best practice is to use conda.
 Then you need to have matplotlib and numpy libraries installed in order to make the program work.
